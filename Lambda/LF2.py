@@ -56,14 +56,14 @@ def get_random_business_id(cuisine_type):
             if business not in businessId and cnt < 3:
                 businessId.append(business)
                 cnt+=1
-    print(businessId)
+    #print(businessId)
     return businessId
 
 
 def get_restaurant_info(businessId,cuisine_type):
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table(DYNAMO_DB_TABLE_NAME)
-    print(table)
+    #print(table)
     formatted_restaurant_info = ''
     for i in businessId:
 
