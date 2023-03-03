@@ -35,12 +35,12 @@ def lambda_handler(event, context):
     Date = dt['stringValue']
     restaurant_info = ""
     print("Message: ", restaurant_info)
-    #for i in range(1, 4):
     restaurantId = get_random_business_id(cuisine_type)
     restaurant_info += get_restaurant_info(restaurantId,cuisine_type) + '\n'
     print('Hello! Here are my ' + cuisine_type + ' restaurant suggestions for ' + number_of_people + ' people in '+ location + ' on ' + Date + ' at '+ time + '\n' + restaurant_info)
     sendMessage = 'Hello! Here are my ' + cuisine_type + ' restaurant suggestions for ' + number_of_people + ' people in '+ location + ' on ' + Date + ' at '+ time + '\n' + restaurant_info
     temp_email(sendMessage, email)
+    
 def get_random_business_id(cuisine_type):
     index = 'restaurants_search'
     es_query = host + '/' + index + '/_search?q=' + str(cuisine_type)
@@ -56,14 +56,12 @@ def get_random_business_id(cuisine_type):
             if business not in businessId and cnt < 3:
                 businessId.append(business)
                 cnt+=1
-    #print(businessId)
     return businessId
 
 
 def get_restaurant_info(businessId,cuisine_type):
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table(DYNAMO_DB_TABLE_NAME)
-    #print(table)
     formatted_restaurant_info = ''
     for i in businessId:
 
