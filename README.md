@@ -3,7 +3,7 @@
 ## About ##
 
 Frontend starter repository for HW 1 of the Cloud Computing & Big Data
-class at Columbia University and New York University.
+class at New York University.
 
 ## Usage ##
 
@@ -12,4 +12,3 @@ class at Columbia University and New York University.
    Gateway.
 3. Open `chat.html` in any browser.
 4. Start sending messages to test the chatbot interaction.
-
