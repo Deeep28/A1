@@ -10,10 +10,6 @@ import urllib3
 import os
 import requests
 
-QUEUE_URL = 'https://sqs.us-east-1.amazonaws.com/*****'
-
-ES_USER = 'u***'
-ES_PASS = 'Un******'
 host = 'https://*****************.us-east-1.es.amazonaws.com'
 
 DYNAMO_DB_TABLE_NAME = 'yelp-restau********'
