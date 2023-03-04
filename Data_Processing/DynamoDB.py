@@ -4,7 +4,6 @@ import boto3
 from datetime import datetime
 import pickle
 
-#globalConfig
 cuisineTypes = ['indian','american','italian','japanese','chinese','mexican']
 location = ['manhattan']
 businessType = 'restaurant'
@@ -12,16 +11,16 @@ radius ='30000'
 
 #AWS Config
 awsRegion = 'us-east-1'
-accessID='AKIAWMQVJQOOLMMDVGN2'
-secretKey = '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'
+accessID='AKIAWMQV**********'
+secretKey = 'fV7+xiX/2xI/u4f***************'
 dbObject = boto3.resource('dynamodb',region_name=awsRegion, aws_access_key_id=accessID, aws_secret_access_key=secretKey)
 dbtable = dbObject.Table('yelp-restaurants')
 
 
 #yelpConfig
 yelpEndpoint='https://api.yelp.com/v3/businesses/search'
-clientID='qmfVRIb1J7JiqUMeYVQUbw'
-yelpKey='rqw2hboWgSoScJuaBU9EDXaujOOnSQSD07Vax48SFwYxocenWrDbY60Dr-LExubhHR3qikjPKJUo14Q6qMcKRocNjGbyRL0UEMe7wgsRYQNWlsG___HpyVxi38r7Y3Yx'
+clientID='qmfVRIb1J*********'
+yelpKey='rqw2hboWgSoScJuaBU9EDXaujOOnSQSD07Vax48SFwYxocenWrDbY******************'
 yelpConfig={'Authorization':'Bearer ' + yelpKey}
 
 globalDict = {}
