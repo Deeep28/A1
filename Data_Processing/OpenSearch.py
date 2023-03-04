@@ -5,10 +5,10 @@ import pickle
 import random
 
 
-openSearchEndpoint = 'https://search-search-es-restaurants-ujmv432i6ot4q5n6lsadgcw5kq.us-east-1.es.amazonaws.com'
+openSearchEndpoint = 'https://search-search-es-restaurant*********.us-east-1.es.amazonaws.com'
 region = 'us-east-1'
-accessID='AKIAWMQVJQOOLMMDVGN2'
-secretKey = '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'
+accessID='AKIAWMQV*******'
+secretKey = 'fV7+xiX/2xI/u4f***********'
 
 service = 'es'
 credentials = boto3.Session(region_name=region, aws_access_key_id=accessID, aws_secret_access_key=secretKey).get_credentials()
